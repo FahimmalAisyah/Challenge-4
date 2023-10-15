@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- <style>
+        .modal{
+    width: 500px;
+    height: 500px;
+  }
+    </style> -->
+</head>
+<body>
+    <button class="opne_btn">open</button>
+    <dialog class="modal" >
+        <div class="modal-content">
+            <div class="img-container">
+                <img src="images/img-BeepBeep.png" alt="car">
+            </div>
+            <h2>Menghapus Data Mobil</h2>
+            <br>
+            <p>setelah dihapus, data mobil tidak dapat dikembalikan. Yakin ingin menghapus?</p>
+        </div>
+        <button class="btn btn-primary moYes">Ya</button>
+        <button class="btn moNo" >Tidak</button>
+    </dialog>
+    <script>
+        const open = document.querySelector('.opne_btn');
+        const modal = document.querySelector('.modal');
+
+        open.addEventListener('click', ()=>{
+            modal.showModal();
+        })
+        const close = document.querySelector('.moNo');
+        close.addEventListener('click', ()=>{
+            modal.close();
+        })
+    </script>
+    <script src="js/main.js"></script>
+</body>
+</html>
